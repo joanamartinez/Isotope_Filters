@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <title>Document</title>
+  </head>
+
+  <header>
+    <nav class="nav-bar">
+        <ul class="nav-bar-left">
+            <li>
+                <button class="card-button" onclick="openNav()">Filters</button>
+            </li>
+        </ul>
+        <ul class="nav-bar-right">
+            <li class="nav-bar-item nav-bar-item-selected">All</li>
+            <li class="nav-bar-item">Starters</li>
+            <li class="nav-bar-item">Meat</li>
+            <li class="nav-bar-item">Fish</li>
+            <li class="nav-bar-item">Desserts</li>
+            <li class="nav-bar-item">Other</li>
+        </ul>
+    </nav>
+  </header>
+
+  <body>
+
+    <div id="side-nav-bar" class="side-nav-bar">
+        <div class="search-section">
+            <div class="search-section-header">
+                <h1>Search</h1>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            <input type="text">
+        </div>
+        <div class="filters">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="cards-container">
+            <div class="card">
+                <div class="class-header">
+                    <img class="card-img" src="images/hummus.png" alt="Hummus Recipe">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Hummus Recipe</h2>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero fuga repudiandae.</p>
+                    <a href="https://www.simplyrecipes.com/buffalo-hummus-recipe-6951383" target="_blank" class="card-button">To the Blog Post</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="class-header">
+                    <img class="card-img" src="images/air-fryer-chicken.png" alt="Air Fryer Chicken Recipe">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Air Fryer Chicken Recipe</h2>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero fuga repudiandae.</p>
+                    <a href="https://www.simplyrecipes.com/recipes/air_fryer_chicken_wings/" target="_blank" class="card-button">Watch video</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="class-header">
+                    <img class="card-img" src="images/vegan-queso.png" alt="Vegan Queso Recipe">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Vegan Queso Recipe</h2>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero fuga repudiandae.</p>
+                    <a href="https://www.simplyrecipes.com/vegan-queso-recipe-5215824" target="_blank" class="card-button">Go to the Book</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="class-header">
+                    <img class="card-img" src="images/air-fryer-fish.png" alt="Air Fryer Fish Recipe">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Air Fryer Fish Recipe</h2>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero fuga repudiandae.</p>
+                    <a href="https://www.simplyrecipes.com/air-fryer-fish-sticks-recipe-5705813" target="_blank" class="card-button">To the Blog Post</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="class-header">
+                    <img class="card-img" src="images/beef-wellington.png" alt="Beef Wellington Recipe">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Beef Wellington Recipe</h2>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero fuga repudiandae.</p>
+                    <a href="https://www.simplyrecipes.com/recipes/beef_wellington/" target="_blank" class="card-button">To the Blog Post</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="class-header">
+                    <img class="card-img" src="images/jelly-donuts.png" alt="Jelly Donuts Recipe">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Jelly Donuts Recipe</h2>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero fuga repudiandae.</p>
+                    <a href="https://www.simplyrecipes.com/sufganiyot-israeli-jelly-donuts-recipe-6828244" target="_blank" class="card-button">To the Blog Post</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="class-header">
+                    <img class="card-img" src="images/oven-salmon.png" alt="Oven Salmon Recipe">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Oven Salmon Recipe</h2>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero fuga repudiandae.</p>
+                    <a href="https://www.simplyrecipes.com/cedar-plank-salmon-recipe-5497835" target="_blank" class="card-button">To the Blog Post</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="class-header">
+                    <img class="card-img" src="images/pumpkin-spice-babka.png" alt="Pumpkin Spice Babka Recipe">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Pumpkin Spice Babka Recipe</h2>
+                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero fuga repudiandae.</p>
+                    <a href="https://www.simplyrecipes.com/pumpkin-spice-babka-recipe-6543974" target="_blank" class="card-button">To the Blog Post</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
