@@ -40,7 +40,6 @@
 /* Side NavBar Style */
 main {
   display: flex;
-  /*margin: auto -1rem 1rem;*/
 }
 
 .hidden {
@@ -49,6 +48,9 @@ main {
 
 .side-nav-bar {
   flex: 1;
+  left: 0;
+  transition: 2s;
+  background-color: burlywood;
 }
 
 .cards {
@@ -61,6 +63,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 .cards-container {
@@ -79,8 +82,21 @@ main {
   overflow: hidden;
 }
 
+/* Card Overlapping Icon Style */
 .card-header {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon, .logo {
+  position: absolute;
+  color: #ffffff;
+}
+
+.card-icon {
+  cursor: pointer;
 }
 
 .card-img {
@@ -89,11 +105,6 @@ main {
   height: 180px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
-}
-
-.card-header .play-icon { 
-  position: absolute; 
-  margin: auto;
 }
  
 .card-body {

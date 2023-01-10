@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script defer src="js/index.js"></script>
     <title>Document</title>
   </head>
@@ -15,7 +16,7 @@
     <nav class="nav-bar">
         <ul class="nav-bar-left">
             <li>
-                <button id="filter-button" class="filter-button" onclick="openNav()">Filters</button>
+                <button id="filter-button" class="filter-button" onclick="openSideNav()">Filters</button>
             </li>
         </ul>
         <ul class="nav-bar-right">
@@ -35,9 +36,9 @@
             <div class="search-section">
                 <div class="search-section-header">
                     <h1>Search</h1>
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
                 </div>
-                <input type="text">
+                <input type="text" class="search-bar">
             </div>
             <div class="filters">
                 <a href="#">About</a>
@@ -49,8 +50,8 @@
 
         <div id="cards">
             <div class="cards-container">
-                <div class="card">
-                    <div class="class-header">
+                <div class="card" data-category="starters">
+                    <div class="card-header">
                         <img class="card-img" src="images/hummus.png" alt="Hummus Recipe">
                     </div>
                     <div class="card-body">
@@ -61,9 +62,11 @@
                 </div>
 
                 <div class="card">
-                    <div class="class-header">
+                    <div class="card-header">
                         <img class="card-img" src="images/air-fryer-chicken.png" alt="Air Fryer Chicken Recipe">
-                        <i class="fa fa-play-circle-o play-icon" style="font-size:36px;"></i>
+                        <div class="card-icon">
+                            <i class="fa-light fa-circle-play"  style="font-size: 100px"></i>
+                        </div>
                     </div>
                     <div class="card-body">
                         <h2 class="card-title">Air Fryer Chicken Recipe</h2>
@@ -73,7 +76,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="class-header">
+                    <div class="card-header">
                         <img class="card-img" src="images/vegan-queso.png" alt="Vegan Queso Recipe">
                     </div>
                     <div class="card-body">
@@ -84,8 +87,11 @@
                 </div>
 
                 <div class="card">
-                    <div class="class-header">
+                    <div class="card-header">
                         <img class="card-img" src="images/air-fryer-fish.png" alt="Air Fryer Fish Recipe">
+                        <div class="card-icon">
+                            <i class="fa-light fa-circle-play"  style="font-size: 100px"></i>
+                        </div>
                     </div>
                     <div class="card-body">
                         <h2 class="card-title">Air Fryer Fish Recipe</h2>
@@ -95,8 +101,11 @@
                 </div>
 
                 <div class="card">
-                    <div class="class-header">
+                    <div class="card-header">
                         <img class="card-img" src="images/beef-wellington.png" alt="Beef Wellington Recipe">
+                        <div class="logo">
+                            <img src="images/jeep-icon.svg" alt="Jeep logo" style="width:100px;">
+                        </div>
                     </div>
                     <div class="card-body">
                         <h2 class="card-title">Beef Wellington Recipe</h2>
@@ -106,7 +115,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="class-header">
+                    <div class="card-header">
                         <img class="card-img" src="images/jelly-donuts.png" alt="Jelly Donuts Recipe">
                     </div>
                     <div class="card-body">
@@ -117,7 +126,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="class-header">
+                    <div class="card-header">
                         <img class="card-img" src="images/oven-salmon.png" alt="Oven Salmon Recipe">
                     </div>
                     <div class="card-body">
@@ -128,7 +137,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="class-header">
+                    <div class="card-header">
                         <img class="card-img" src="images/pumpkin-spice-babka.png" alt="Pumpkin Spice Babka Recipe">
                     </div>
                     <div class="card-body">
