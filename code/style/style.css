@@ -10,77 +10,63 @@
 }
 
 * {
-    font-family: var(--font-family);
+  font-family: var(--font-family);
 }
 
 /* NavBar Style */
 .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
 }
 
 .nav-bar-left {
-    list-style: none;
+  list-style: none;
 }
 
 .nav-bar-item {
-    display: inline-block;
-    padding: 0 1.5em;
-    font-weight: bold;
-    cursor: pointer;
-    color: rgb(92, 92, 92);
+  display: inline-block;
+  padding: 0 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(92, 92, 92);
 }
 
 .nav-bar-item-selected {
-    color: var(--btn-color);
+  color: var(--btn-color);
 }
 
 /* Side NavBar Style */
+main {
+  display: flex;
+  /*margin: auto -1rem 1rem;*/
+}
+
+.hidden {
+  display: none;
+}
+
 .side-nav-bar {
-    display: none;
-    position: relative;
-    left: -250px;
-    height: calc(100vh - 100px);
-    width: 0;
-/*    position: fixed;*/
-    bottom: 0;
-    left: 0;
-    background-color: transparent;
-    /*overflow-x: hidden;*/
-    background-color: rgb(252, 180, 154);
-    transition: 0.5s;
+  flex: 1;
 }
 
-.side-nav-bar.is-active {
-    display: block;
-    transition: all 2000ms ease;
+.cards {
+  flex: 3;
 }
-
-.side-nav-bar.is-active~.cards {
-    width: 100vw;
-    position: absolute;
-    left: calc(250px);
-    top: 0;
-    margin-top: 7em;
-}
-
-
 
 /* Card Style */
-.cards {
-    width: 100%;
+#cards {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .cards-container {
   display: flex;
-  margin: 0em 5.25em 4em 5.25em ;
-  justify-content: space-evenly;
+  margin: 0em 4em 4em 4em;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -93,18 +79,28 @@
   overflow: hidden;
 }
 
+.card-header {
+  position: relative;
+}
+
 .card-img {
+  display: block;
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
+.card-header .play-icon { 
+  position: absolute; 
+  margin: auto;
+}
+ 
 .card-body {
   padding: 1em 2em;
   height: 200px;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
@@ -118,7 +114,7 @@
 }
 
 /* Buttons Style */
-.card-button {
+.card-button, .filter-button {
   margin-top: auto;
   margin-bottom: 10px;
   width: fit-content;
@@ -134,6 +130,11 @@
   text-decoration: none;
   transition: all 0.3s;
   cursor: pointer;
+}
+
+.filter-button-active {
+  color: #ffffff;
+  background-color: var(--btn-color);
 }
 
 .card-button:hover {
