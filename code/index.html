@@ -19,14 +19,30 @@
                 <button id="filter-button" class="filter-button" onclick="openSideNav()">Filters</button>
             </li>
         </ul>
-        <ul class="nav-bar-right">
-            <li class="nav-bar-item nav-bar-item-selected">All</li>
-            <li class="nav-bar-item">Starters</li>
-            <li class="nav-bar-item">Meat</li>
-            <li class="nav-bar-item">Fish</li>
-            <li class="nav-bar-item">Desserts</li>
-            <li class="nav-bar-item">Other</li>
-        </ul>
+        <!-- 
+            <div class="filters">
+                <div class="ui-group">
+                    <h3>Color</h3>
+                    <div class="button-group js-radio-button-group" data-filter-group="color">
+                    <button class="button is-checked" data-filter="">any</button>
+                    <button class="button" data-filter=".red">red</button>
+                    <button class="button" data-filter=".blue">blue</button>
+                    <button class="button" data-filter=".yellow">yellow</button>
+                    </div>
+                </div>
+            </div>
+        -->
+        <div class="filters">
+            <ul class="nav-bar-right ui-group">
+                <div class="nav-bar-group js-radio-nav-bar-group" data-filter-group="types">
+                    <li class="nav-bar-item nav-bar-item-selected" data-filter=".all">All</li>
+                    <li class="nav-bar-item" data-filter=".starters">Starters</li>
+                    <li class="nav-bar-item" data-filter=".meat">Meat</li>
+                    <li class="nav-bar-item" data-filter=".fish">Fish</li>
+                    <li class="nav-bar-item" data-filter=".desserts">Desserts</li>
+                </div>
+            </ul>
+        </div>
     </nav>
   </header>
 
@@ -35,22 +51,28 @@
         <div id="side-nav-bar" class="hidden"> 
             <div class="search-section">
                 <div class="search-section-header">
-                    <h1>Search</h1>
+                    <h3 class="search-title">Search</h3>
                     <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
                 </div>
-                <input type="text" class="search-bar">
+                <input type="text" class="search-bar" placeholder="i.e Book">
             </div>
             <div class="filters">
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+                <h3 class="filters-title">Filter by content type</h3>
+                <div class="side-nav-bar ui-group">
+                    <div class="side-nav-bar-group js-radio-side-nav-bar-group" data-filter-group="color">
+                        <a class="side-nav-bar-item side-nav-bar-item-selected" data-filter=".all-types" >All</a>
+                        <a class="side-nav-bar-item" data-filter=".blog-post" >Blog Post</a>
+                        <a class="side-nav-bar-item" data-filter=".video" >Video</a>
+                        <a class="side-nav-bar-item" data-filter=".book" >Book</a>
+                    </div>
+                </div>
             </div>
         </div>
-
+        
         <div id="cards">
-            <div class="cards-container">
-                <div class="card" data-category="starters">
+            <div id="cards-container" class="cards-container">
+                <input type="text" class="search-bar-mobile search-bar" style="visibility: hidden;">
+                <div class="card all all-types starters blog-post">
                     <div class="card-header">
                         <img class="card-img" src="images/hummus.png" alt="Hummus Recipe">
                     </div>
@@ -61,7 +83,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card all all-types meat video">
                     <div class="card-header">
                         <img class="card-img" src="images/air-fryer-chicken.png" alt="Air Fryer Chicken Recipe">
                         <div class="card-icon">
@@ -75,7 +97,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card all all-types starters book">
                     <div class="card-header">
                         <img class="card-img" src="images/vegan-queso.png" alt="Vegan Queso Recipe">
                     </div>
@@ -86,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card all all-types fish blog-post">
                     <div class="card-header">
                         <img class="card-img" src="images/air-fryer-fish.png" alt="Air Fryer Fish Recipe">
                         <div class="card-icon">
@@ -100,7 +122,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card all all-types meat blog-post">
                     <div class="card-header">
                         <img class="card-img" src="images/beef-wellington.png" alt="Beef Wellington Recipe">
                         <div class="logo">
@@ -114,7 +136,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card all all-types desserts blog-post">
                     <div class="card-header">
                         <img class="card-img" src="images/jelly-donuts.png" alt="Jelly Donuts Recipe">
                     </div>
@@ -125,7 +147,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card all all-types fish blog-post">
                     <div class="card-header">
                         <img class="card-img" src="images/oven-salmon.png" alt="Oven Salmon Recipe">
                     </div>
@@ -136,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card all all-types desserts blog-post">
                     <div class="card-header">
                         <img class="card-img" src="images/pumpkin-spice-babka.png" alt="Pumpkin Spice Babka Recipe">
                     </div>

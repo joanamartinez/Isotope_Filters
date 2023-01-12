@@ -25,15 +25,18 @@
   list-style: none;
 }
 
-.nav-bar-item {
-  display: inline-block;
-  padding: 0 1.5em;
+.nav-bar-item, .side-nav-bar-item {
   font-weight: bold;
   cursor: pointer;
   color: rgb(92, 92, 92);
 }
 
-.nav-bar-item-selected {
+.nav-bar-item {
+  display: inline-block;
+  padding: 0 1.5em;
+}
+
+.nav-bar-item-selected, .side-nav-bar-item-selected {
   color: var(--btn-color);
 }
 
@@ -46,11 +49,45 @@ main {
   display: none;
 }
 
+.filters-title, .search-title {
+  color: rgb(129, 127, 127);
+}
+
+.search-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .side-nav-bar {
   flex: 1;
+  min-width: 350px;
   left: 0;
-  transition: 2s;
-  background-color: burlywood;
+  transition: 2s; 
+}
+
+.side-nav-bar-item {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em 1em 0.5em 0;
+  margin-left: 0%;
+}
+
+.closebtn {
+  text-decoration: none;
+  font-size: 3em;
+  color: rgb(129, 127, 127);
+  margin-right: 10px;
+}
+
+.search-bar {
+  width: calc(100% - 10px);
+  border-radius: 3px;
+  padding: 12px 20px;
+  margin: 0.5em 0 1em 0;
+  box-sizing: border-box;
+  border: 1px solid  rgb(129, 127, 127);
+  box-shadow: inset 0px 6px 8px -10px rgb(129, 127, 127);
 }
 
 .cards {
@@ -60,17 +97,16 @@ main {
 /* Card Style */
 #cards {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .cards-container {
+  width: 100%;
   display: flex;
-  margin: 0em 4em 4em 4em;
+  justify-content: center;
+  margin: 0 auto;
   justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 .card {
@@ -154,7 +190,11 @@ main {
 }
 
 @media (max-width: 800px) {
-  .nav-bar {
+  .nav-bar, .side-nav-bar {
     visibility: hidden;
+  }
+
+  .search-bar-mobile {
+    visibility: visible;
   }
 }
