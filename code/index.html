@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="https://www.insideers.com/wp-content/themes/insideers/images/favicon.png">
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script defer src="js/index.js"></script>
-    <title>Document</title>
+    <title>Recipes</title>
   </head>
 
   <header>
@@ -19,29 +20,16 @@
                 <button id="filter-button" class="filter-button" onclick="openSideNav()">Filters</button>
             </li>
         </ul>
-        <!-- 
-            <div class="filters">
-                <div class="ui-group">
-                    <h3>Color</h3>
-                    <div class="button-group js-radio-button-group" data-filter-group="color">
-                    <button class="button is-checked" data-filter="">any</button>
-                    <button class="button" data-filter=".red">red</button>
-                    <button class="button" data-filter=".blue">blue</button>
-                    <button class="button" data-filter=".yellow">yellow</button>
-                    </div>
-                </div>
-            </div>
-        -->
         <div class="filters">
-            <ul class="nav-bar-right ui-group">
-                <div class="nav-bar-group js-radio-nav-bar-group" data-filter-group="types">
+            <div class="nav-bar-right ui-group">
+                <ul class="nav-bar-group js-radio-nav-bar-group" data-filter-group="types">
                     <li class="nav-bar-item nav-bar-item-selected" data-filter=".all">All</li>
                     <li class="nav-bar-item" data-filter=".starters">Starters</li>
                     <li class="nav-bar-item" data-filter=".meat">Meat</li>
                     <li class="nav-bar-item" data-filter=".fish">Fish</li>
                     <li class="nav-bar-item" data-filter=".desserts">Desserts</li>
-                </div>
-            </ul>
+                </ul>
+            </div>
         </div>
     </nav>
   </header>
@@ -54,11 +42,11 @@
                     <h3 class="search-title">Search</h3>
                     <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
                 </div>
-                <input type="text" class="search-bar" placeholder="i.e Book">
+                <input id="search-bar" type="text" class="search-bar" placeholder="i.e Book">
             </div>
             <div class="filters">
                 <h3 class="filters-title">Filter by content type</h3>
-                <div class="side-nav-bar ui-group">
+                <div class="ui-group">
                     <div class="side-nav-bar-group js-radio-side-nav-bar-group" data-filter-group="color">
                         <a class="side-nav-bar-item side-nav-bar-item-selected" data-filter=".all-types" >All</a>
                         <a class="side-nav-bar-item" data-filter=".blog-post" >Blog Post</a>
@@ -67,11 +55,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div id="cards" style="display:grid; grid-template-columns: repeat(auto-fill, 300px);">
-            <div id="cards-container" class="cards-container" style="width: 100vw;">
-                <input type="text" class="search-bar-mobile search-bar" style="visibility: hidden;">
+        </div>     
+
+        <div id="cards" class="cards">
+            <div class="search-bar-mobile-container">
+                <input id="search-bar-mobile" type="text" class="search-bar-mobile">
+            </div>
+            <div id="cards-container" class="cards-container" style="width: 100%; ">
                 <div class="card all all-types starters blog-post">
                     <div class="card-header">
                         <img class="card-img" src="images/hummus.png" alt="Hummus Recipe">
@@ -87,7 +77,7 @@
                     <div class="card-header">
                         <img class="card-img" src="images/air-fryer-chicken.png" alt="Air Fryer Chicken Recipe">
                         <div class="card-icon">
-                            <i class="fa-light fa-circle-play"  style="font-size: 100px"></i>
+                            <i class="fa-light fa-circle-play"  style="font-size: 100px;"></i>
                         </div>
                     </div>
                     <div class="card-body">
@@ -108,17 +98,17 @@
                     </div>
                 </div>
 
-                <div class="card all all-types fish blog-post">
+                <div class="card all all-types fish video">
                     <div class="card-header">
                         <img class="card-img" src="images/air-fryer-fish.png" alt="Air Fryer Fish Recipe">
                         <div class="card-icon">
-                            <i class="fa-light fa-circle-play"  style="font-size: 100px"></i>
+                            <i class="fa-light fa-circle-play"  style="font-size: 100px;"></i>
                         </div>
                     </div>
                     <div class="card-body">
                         <h2 class="card-title">Air Fryer Fish Recipe</h2>
                         <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero fuga repudiandae.</p>
-                        <a href="https://www.simplyrecipes.com/air-fryer-fish-sticks-recipe-5705813" target="_blank" class="card-button">To the Blog Post</a>
+                        <a href="https://www.simplyrecipes.com/air-fryer-fish-sticks-recipe-5705813" target="_blank" class="card-button">Watch video</a>
                     </div>
                 </div>
 
