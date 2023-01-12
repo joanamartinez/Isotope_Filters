@@ -14,7 +14,8 @@ var $cards = $('#cards-container').isotope({
     var $this = $(this);
     var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
     var navItemResult = navItemFilter ? $this.is( navItemFilter ) : true;
-    return searchResult && navItemResult;
+    var sideNavItemResult = sideNavItemFilter ? $(this).is( sideNavItemFilter ) : true;
+    return searchResult && navItemResult && sideNavItemResult;
   },
 });
 
